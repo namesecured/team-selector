@@ -1,10 +1,10 @@
 /* cockpit javascript helper */
 Cockpit = window.Cockpit || {};
 
-Cockpit.TeamSelector = new CockpitTeamSelector || (function () {
-  return{
-    init: funciton(){
+Cockpit.TeamSelector = Cockpit.TeamSelector || (function () {
+  return {
+    init : function(){
       alert('initialized');
-    };
+    }
   };
 })();

@@ -3,8 +3,14 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>Team Selector</title>
-  <script language="JavaScript" type="text/javascript" src="./Static/Scripts/jquery-1.7.1.js"></script>
-  <script language="JavaScript" type="text/javascript" src="./Static/Scripts/Cockpit.TeamSelector.js"></script>
+  <script language="JavaScript" type="text/javascript" src="Static/Scripts/jquery-1.7.1.js"></script>
+  <script language="JavaScript" type="text/javascript" src="Static/Scripts/Cockpit.TeamSelector.js"></script>
+  
+  <script language="JavaScript" type="text/javascript">
+    $(document).ready(function(){
+      Cockpit.TeamSelector.init();
+    });
+  </script>
 </head>
 <body>
   <h1>Team selector</h1>
@@ -14,6 +20,5 @@
   
   <table id="team-detached">
   </table>
-  
 </body>
 </html>
