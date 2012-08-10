@@ -1,3 +1,9 @@
 Cockpit = window.Cockpit || {};
 
-Cockpit.TeamSelector = new CockpitTeamSelector || (function () {})();
+Cockpit.TeamSelector = new CockpitTeamSelector || (function () {
+  return{
+    init: funciton(){
+      alert('initialized');
+    };
+  };
+})();
