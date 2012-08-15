@@ -1,24 +1,33 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title>Team Selector</title>
-  <script language="JavaScript" type="text/javascript" src="Static/Scripts/jquery-1.7.1.js"></script>
-  <script language="JavaScript" type="text/javascript" src="Static/Scripts/Cockpit.TeamSelector.js"></script>
-  
-  <script language="JavaScript" type="text/javascript">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Team Selector</title>
+    <script language="JavaScript" type="text/javascript" src="Static/Scripts/jquery-1.7.1.js"></script>
+    <script language="JavaScript" type="text/javascript" src="Static/Scripts/Cockpit.TeamSelector.js"></script>
+    
+  </head>
+  <body>
+    
+    <form action="submit">
+      <input type="hidden" name="team-list-unit-cms" value="false" data-team-id="unit-cms" data-team-name="CMS Unit"></input>
+      <input type="hidden" name="team-list-unit-social" value="false" data-team-id="unit-social" data-team-name="Social Unit"></input>
+      <input type="hidden" name="team-list-unit-game" value="false" data-team-id="unit-game" data-team-name="Game Unit"></input>
+      
+      <h1>Team selector</h1>
+      <table id="team-attached">  
+      </table>
+
+      <table id="team-detached">
+      </table>
+    </form>
+
+    <script language="JavaScript" type="text/javascript">
     $(document).ready(function(){
-      Cockpit.TeamSelector.init();
+      Cockpit.TeamSelector.init('team', 'attached', 'detached');
+      Cockpit.TeamSelector.doWork();
     });
-  </script>
-</head>
-<body>
-  <h1>Team selector</h1>
-  
-  <table id="team-attached">  
-  </table>
-  
-  <table id="team-detached">
-  </table>
-</body>
+    </script>
+    
+  </body>
 </html>
